@@ -1,12 +1,7 @@
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.io.*;
 
 public class Pensjonariusz {
-    String imie;
+    /*String imie;
     String typTerapii;
     int wiek;
 
@@ -14,8 +9,21 @@ public class Pensjonariusz {
         this.imie = imie;
         this.typTerapii = typTerapii;
         this.wiek = wiek;
+    }*/
+
+    public static void readFileAsString(String fileName) throws IOException {
+        BufferedReader br = new BufferedReader(new FileReader("dane.txt"));
+        StringBuilder sb = new StringBuilder();
+
+        String line = br.readLine();
+        while (line != null) {
+            sb.append(line).append("\n");
+            line = br.readLine();
+        }
+
+        String fileAsString = sb.toString();
+        System.out.println(fileAsString);
+        return;
     }
-
-
 
 }

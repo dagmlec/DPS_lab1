@@ -1,10 +1,11 @@
 import java.io.File;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args){
-        Pensjonariusz r  = new Pensjonariusz("ola", "cccwc",3);
-        System.out.println(r);
+    public static void main(String[] args) throws IOException {
+        Pensjonariusz p = new Pensjonariusz();
+        Pensjonariusz.readFileAsString("dane.txt");
 
     }
 }
